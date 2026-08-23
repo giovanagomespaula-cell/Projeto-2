@@ -1,175 +1,234 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conhecendo o Mundo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f3f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cabecalho {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 800px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-imagem {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-corpo {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .botao-like {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .botao-like:hover {
+            background-color: #ff6b81;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
+    <header class="cabecalho">
         <h1>Conhecendo o Mundo</h1>
-        <p>Descubra lugares, comidas e costumes de diferentes países!</p>
+        <p>Conheça países, comidas, costumes e lugares incríveis</p>
     </header>
 
-    <main>
+    <main class="conteudo">
 
-        <h2>Quatro países incríveis</h2>
+        <section class="card">
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186"
+                alt="Templo tradicional no Japão"
+                class="card-imagem">
 
-        <p>
-            Viajar pelo mundo é uma oportunidade de conhecer novas culturas,
-            experimentar comidas diferentes e descobrir lugares incríveis.
-            Conheça um pouco sobre quatro países!
-        </p>
+            <div class="card-corpo">
+                <h2>Japão</h2>
 
-        <h2>Japão</h2>
+                <p>
+                    O Japão é conhecido por sua cultura, seus templos,
+                    pelas flores de cerejeira e pela mistura entre tradição
+                    e tecnologia.
+                </p>
 
-        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186"
-            alt="Templo tradicional no Japão"
-            width="300">
+                <p>
+                    Comidas típicas: sushi, ramen, tempurá e takoyaki.
+                </p>
 
-        <h3>Comidas típicas</h3>
+                <p>
+                    Lugares famosos: Monte Fuji, Kyoto e Tokyo.
+                </p>
 
-        <ul>
-            <li>Sushi</li>
-            <li>Ramen</li>
-            <li>Tempurá</li>
-            <li>Takoyaki</li>
-        </ul>
+                <button class="botao-like" aria-label="Adorei este país">
+                    ❤️ Adorei (<span class="contador">0</span>)
+                </button>
 
-        <h3>Costumes e tradições</h3>
+                <button class="botao-like" aria-label="Gostei deste país">
+                    👍 Gostei (<span class="contador">0</span>)
+                </button>
+            </div>
+        </section>
 
-        <p>
-            O Japão possui uma cultura marcada pelo respeito, pela pontualidade
-            e pela preservação de tradições. O hanami, por exemplo, é o costume
-            de apreciar as flores de cerejeira durante a primavera.
-        </p>
+        <section class="card">
+            <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99"
+                alt="Montanhas dos Alpes na Suíça"
+                class="card-imagem">
 
-        <h3>Lugares famosos</h3>
+            <div class="card-corpo">
+                <h2>Suíça</h2>
 
-        <ul>
-            <li>Monte Fuji</li>
-            <li>Templos de Kyoto</li>
-            <li>Tokyo</li>
-        </ul>
+                <p>
+                    A Suíça é conhecida pelas montanhas dos Alpes,
+                    pelas belas paisagens e por suas diferentes culturas
+                    e tradições.
+                </p>
 
-        <hr>
+                <p>
+                    Comidas típicas: chocolate, fondue, raclette e rösti.
+                </p>
 
-        <h2>Suíça</h2>
+                <p>
+                    Lugares famosos: Alpes Suíços, Interlaken e Lucerna.
+                </p>
 
-        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99"
-            alt="Montanhas dos Alpes na Suíça"
-            width="300">
+                <button class="botao-like" aria-label="Adorei este país">
+                    ❤️ Adorei (<span class="contador">0</span>)
+                </button>
 
-        <h3>Comidas típicas</h3>
+                <button class="botao-like" aria-label="Gostei deste país">
+                    👍 Gostei (<span class="contador">0</span>)
+                </button>
+            </div>
+        </section>
 
-        <ul>
-            <li>Chocolate suíço</li>
-            <li>Fondue</li>
-            <li>Raclette</li>
-            <li>Rösti</li>
-        </ul>
+        <section class="card">
+            <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198"
+                alt="Cidade de Veneza na Itália"
+                class="card-imagem">
 
-        <h3>Costumes e tradições</h3>
+            <div class="card-corpo">
+                <h2>Itália</h2>
 
-        <p>
-            A Suíça é conhecida por suas tradições alpinas, pela valorização
-            da natureza e pela diversidade cultural. O país possui quatro
-            idiomas nacionais e diferentes costumes regionais.
-        </p>
+                <p>
+                    A Itália possui uma cultura rica em arte, arquitetura,
+                    história e gastronomia.
+                </p>
 
-        <h3>Lugares famosos</h3>
+                <p>
+                    Comidas típicas: pizza, massas, risoto e gelato.
+                </p>
 
-        <ul>
-            <li>Alpes Suíços</li>
-            <li>Interlaken</li>
-            <li>Lucerna</li>
-        </ul>
+                <p>
+                    Lugares famosos: Coliseu, Veneza, Torre de Pisa
+                    e Fontana di Trevi.
+                </p>
 
-        <hr>
+                <button class="botao-like" aria-label="Adorei este país">
+                    ❤️ Adorei (<span class="contador">0</span>)
+                </button>
 
-        <h2>Itália</h2>
+                <button class="botao-like" aria-label="Gostei deste país">
+                    👍 Gostei (<span class="contador">0</span>)
+                </button>
+            </div>
+        </section>
 
-        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198"
-            alt="Cidade de Veneza na Itália"
-            width="300">
+        <section class="card">
+            <img src="https://images.unsplash.com/photo-1538485399081-7c897b7c5c8b"
+                alt="Cidade de Seul na Coreia do Sul"
+                class="card-imagem">
 
-        <h3>Comidas típicas</h3>
+            <div class="card-corpo">
+                <h2>Coreia do Sul</h2>
 
-        <ul>
-            <li>Pizza</li>
-            <li>Massas</li>
-            <li>Risoto</li>
-            <li>Gelato</li>
-        </ul>
+                <p>
+                    A Coreia do Sul mistura tradições antigas com uma cultura
+                    moderna e possui uma rica história.
+                </p>
 
-        <h3>Costumes e tradições</h3>
+                <p>
+                    Comidas típicas: kimchi, bibimbap, tteokbokki e bulgogi.
+                </p>
 
-        <p>
-            A Itália possui uma cultura muito rica em arte, música, arquitetura
-            e gastronomia. As refeições e os momentos em família são muito
-            valorizados em diversas regiões do país.
-        </p>
+                <p>
+                    Lugares famosos: Seul, Palácio Gyeongbokgung,
+                    Busan e Ilha de Jeju.
+                </p>
 
-        <h3>Lugares famosos</h3>
+                <button class="botao-like" aria-label="Adorei este país">
+                    ❤️ adorei (<span class="contador">0</span>)
+                </button>
 
-        <ul>
-            <li>Coliseu</li>
-            <li>Veneza</li>
-            <li>Torre de Pisa</li>
-            <li>Fontana di Trevi</li>
-        </ul>
-
-        <hr>
-
-        <h2>Coreia do Sul</h2>
-
-        <img src="https://images.unsplash.com/photo-1538485399081-7c897b7c5c8b"
-            alt="Cidade de Seul na Coreia do Sul"
-            width="300">
-
-        <h3>Comidas típicas</h3>
-
-        <ul>
-            <li>Kimchi</li>
-            <li>Bibimbap</li>
-            <li>Tteokbokki</li>
-            <li>Bulgogi</li>
-        </ul>
-
-        <h3> Costumes e tradições</h3>
-
-        <p>
-            A Coreia do Sul combina tradições antigas com uma cultura moderna.
-            O hanbok é uma vestimenta tradicional e os palácios históricos
-            mostram parte importante da história do país.
-        </p>
-
-        <h3>🏯 Lugares famosos</h3>
-
-        <ul>
-            <li>Palácio Gyeongbokgung</li>
-            <li>Seul</li>
-            <li>Ilha de Jeju</li>
-            <li>Busan</li>
-        </ul>
-
-        <hr>
-
-        <h2>Gostou de algum desses países?</h2>
-
-        <a href="https://www.google.com">
-            <button>Sim, eu gostei!</button>
-        </a>
+                <button class="botao-like" aria-label="Gostei deste país">
+                    👍 gostei (<span class="contador">0</span>)
+                </button>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
-        <p>Projeto Conhecendo o Mundo 🌎</p>
-    </footer>
+    <script>
+        const botoes = document.querySelectorAll(".botao-like");
+
+        botoes.forEach(function(botao) {
+            botao.addEventListener("click", function() {
+                const contador = botao.querySelector(".contador");
+
+                let numero = Number(contador.textContent);
+
+                numero = numero + 1;
+
+                contador.textContent = numero;
+            });
+        });
+    </script>
 
 </body>
-
 </html>
