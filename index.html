@@ -36,11 +36,13 @@
             padding: 16px;
         }
 
+        /* Tamanho das imagens */
         img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
         }
 
+        /* Estilo do autor */
         .artigo-autor {
             font-weight: bold;
         }
@@ -81,7 +83,7 @@
                 <h2>Looks fofos</h2>
 
                 <p class="artigo-autor">
-                    Por: Giovana
+                    Por: Giovana G.
                 </p>
 
                 <p>
@@ -97,7 +99,7 @@
                 </p>
 
                 <button>
-                    💕<span>0</span>
+                    💕 <span>0</span>
                 </button>
 
                 <button>
@@ -118,7 +120,7 @@
                 <h2>Combinações de roupas</h2>
 
                 <p class="artigo-autor">
-                    Por: Giovana
+                    Por: Giovana G.
                 </p>
 
                 <p>
@@ -134,7 +136,7 @@
                 </p>
 
                 <button>
-                    💕<span>0</span>
+                    💕 <span>0</span>
                 </button>
 
                 <button>
@@ -153,6 +155,8 @@
 
         botoes.forEach(function(botao){
 
+            let curtiu = false
+
             botao.addEventListener("click",botaoClicado)
 
             function botaoClicado(){
@@ -161,7 +165,19 @@
 
                 let texto = botao.querySelector("span")
 
-                texto.textContent++
+                if (curtiu == false) {
+
+                    texto.textContent = "1"
+
+                    curtiu = true
+
+                } else {
+
+                    texto.textContent = "0"
+
+                    curtiu = false
+
+                }
 
             }
 
