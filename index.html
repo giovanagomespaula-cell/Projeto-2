@@ -8,6 +8,8 @@
     <title>Moda e Estilo</title>
 
     <style>
+
+        /* Cores e estilo do cabeçalho */
         header {
             background-color: #ffd9f7;
             color: #7a3b69;
@@ -17,26 +19,21 @@
             padding: 16px;
         }
 
+        /* Cores e estilo da área principal */
         main {
             background-color: #ffffff;
             color: #7a3b69;
             max-width: 800px;
             margin: 0 auto;
             padding: 16px;
-        }
-
-        section {
-            background-color: #fce6f5;
-            padding: 16px;
-            margin-bottom: 16px;
-        }
-
-        article {
             display: flex;
-            background-color: #fff3fa;
-            margin-bottom: 16px;
+        }
+
+        /* Estilo dos conteúdos */
+        article {
+            background-color: #fce6f5;
+            margin: 8px;
             padding: 16px;
-            gap: 16px;
         }
 
         img {
@@ -48,40 +45,31 @@
             font-weight: bold;
         }
 
+        /* Estilo dos botões */
         button {
-            background-color: #ffd9f7;
+            background-color: #e9b6d8;
             color: #7a3b69;
             border: none;
-            padding: 8px 12px;
-            margin-right: 5px;
+            padding: 8px;
             cursor: pointer;
-            border-radius: 8px;
         }
 
-        button:hover {
-            background-color: #f5bde5;
-        }
     </style>
 </head>
 
 <body>
 
     <header>
+
         <h1>Moda e Estilo</h1>
-        <p>Inspirações para looks fofos, modernos e estilosos</p>
+
+        <p>
+            Inspirações para looks fofos, modernos e estilosos
+        </p>
+
     </header>
 
     <main>
-
-        <section>
-            <h2>✨ Descubra seu estilo</h2>
-
-            <p>
-                A moda é uma forma de expressar nossa personalidade.
-                Aqui você pode encontrar inspirações de roupas,
-                combinações de cores e acessórios para diferentes estilos.
-            </p>
-        </section>
 
         <article>
 
@@ -90,20 +78,26 @@
 
             <div>
 
-                <h2>💕 Looks fofos</h2>
+                <h2>Looks fofos</h2>
 
                 <p class="artigo-autor">
-                    Inspiração de look
+                    Por: Giovana
                 </p>
 
                 <p>
-                    Cardigans, saias, blusas delicadas e acessórios
-                    podem formar uma combinação charmosa e confortável.
-                    Os tons de rosa deixam a produção ainda mais delicada.
+                    A moda é uma forma de expressar a personalidade e
+                    mostrar um pouco dos nossos gostos através das roupas,
+                    cores e acessórios que escolhemos.
+                </p>
+
+                <p>
+                    Os looks fofos podem ser criados com peças delicadas,
+                    como saias, blusas, cardigans e acessórios que deixam
+                    a combinação mais charmosa.
                 </p>
 
                 <button>
-                    ❤️ <span>0</span>
+                    💕<span>0</span>
                 </button>
 
                 <button>
@@ -124,17 +118,23 @@
                 <h2>Combinações de roupas</h2>
 
                 <p class="artigo-autor">
-                    Dica de estilo
+                    Por: Giovana
                 </p>
 
                 <p>
-                    Misturar cores, estampas e acessórios é uma maneira
-                    divertida de criar looks únicos. Escolha peças que
-                    combinem entre si e deixe seu estilo aparecer!
+                    As cores também são importantes na hora de montar um
+                    visual. Tons de rosa, branco e outras cores suaves
+                    podem criar combinações bonitas e harmoniosas.
+                </p>
+
+                <p>
+                    O mais importante é escolher roupas que combinem com
+                    o seu estilo e façam você se sentir bem. A moda permite
+                    experimentar diferentes combinações e criar looks únicos.
                 </p>
 
                 <button>
-                    ❤️ <span>0</span>
+                    💕<span>0</span>
                 </button>
 
                 <button>
@@ -149,33 +149,23 @@
 
     <script>
 
-        const botoes = document.querySelectorAll("button");
+        const botoes = document.querySelectorAll("button")
 
-        botoes.forEach(function (botao) {
+        botoes.forEach(function(botao){
 
-            let curtiu = false;
+            botao.addEventListener("click",botaoClicado)
 
-            botao.addEventListener("click", function () {
+            function botaoClicado(){
 
-                let texto = botao.querySelector("span");
+                console.log("fui clicado")
 
-                if (curtiu === false) {
+                let texto = botao.querySelector("span")
 
-                    texto.textContent = Number(texto.textContent) + 1;
+                texto.textContent++
 
-                    curtiu = true;
+            }
 
-                } else {
-
-                    texto.textContent = Number(texto.textContent) - 1;
-
-                    curtiu = false;
-
-                }
-
-            });
-
-        });
+        })
 
     </script>
 
