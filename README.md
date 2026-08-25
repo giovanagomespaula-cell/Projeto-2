@@ -25,7 +25,7 @@ JavaScript
 
 Imagens:
 
-imagem-moda.png (feito na IA)
+imagem-moda.png (feito na IA),
 imagem2-moda.png (feito na IA)
 
 Funcionalidades:
