@@ -1,7 +1,6 @@
 # Projeto-2026
 
-Moda e Estilo
-Sobre o projeto
+Moda e Estilo✨Sobre o Projeto
 
 Este projeto foi criado com o tema moda e estilo. A página apresenta inspirações de looks fofos, modernos e estilosos, utilizando cores em tons de rosa-claro.
 
